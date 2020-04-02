@@ -1,17 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const products = [
+  {
+    name: "Red Valvet Cake",
+    price: 35000,
+    active: true,
+  },
+  {
+    name: "Cheese vol au vent",
+    price: 70000,
+    active: true,
+  },
+  {
+    name: "Chocolate Truffle Pie",
+    price: 70000,
+    active: true,
+  },
+  {
+    name: "Cherry Chocolate Cake",
+    price: 35000,
+    active: true,
+  },
+  {
+    name: "Banana Chocolate Cake",
+    price: 30000,
+    active: false,
+  },
+  {
+    name: "Pudding with fruit of the season",
+    price: 80000,
+    active: false,
+  },
+];
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App products={products} />, document.getElementById("root"));
